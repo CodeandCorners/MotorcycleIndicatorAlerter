@@ -17,10 +17,13 @@ LightAndImageOrchestrator laio(lds, max7219);
 
 
 void setup() {
+  delay(2000);
+  Serial.begin(115200);
   max7219.connect();
   max7219.setMaxbrightness();
   lm393Left.connect();
   lm393Right.connect();
+  delay(1000);
 }
 
 void loop() {

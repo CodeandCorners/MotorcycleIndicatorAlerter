@@ -4,10 +4,8 @@ void LightAndImageOrchestrator::run(){
     DirectionEnum direction = lds.calculateDirection();
 
     max7219.turnOffAll();
-
     if(direction == DirectionEnum::LEFT_ON) {
         max7219.setLeftImage();
-        
     } else if (direction == DirectionEnum::LEFT_ON_TOO_LONG) {
         //Alert user
         max7219.setLeftImage();
@@ -24,6 +22,7 @@ void LightAndImageOrchestrator::run(){
         delay(DELAY_PER_RUN);
         max7219.turnOffAll();
         max7219.setOnTooLong();
+
 
     } else if (direction == DirectionEnum::BOTH_ON || direction == DirectionEnum::BOTH_ON_TOO_LONG) {
         max7219.setBothImage();
