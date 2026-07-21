@@ -13,11 +13,12 @@ LM393 lm393Right(rightInputPin);
 MAX7219 max7219;
 
 LightDirectionService lds(lm393Left, lm393Right);
-LightAndImageOrchestrator laio(lds);
+LightAndImageOrchestrator laio(lds, max7219);
 
 
 void setup() {
   max7219.connect();
+  max7219.setMaxbrightness();
   lm393Left.connect();
   lm393Right.connect();
 }

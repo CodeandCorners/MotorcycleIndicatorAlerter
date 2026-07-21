@@ -1,12 +1,12 @@
   #pragma once
 
   enum class DirectionEnum{
-            LEFT,
-            LEFT_TOO_LONG,
-            RIGHT,
-            RIGHT_TOO_LONG,
-            BOTH,
-            BOTH_TOO_LONG,
+            LEFT_ON,
+            LEFT_ON_TOO_LONG,
+            RIGHT_ON,
+            RIGHT_ON_TOO_LONG,
+            BOTH_ON,
+            BOTH_ON_TOO_LONG,
             NOT_ON
         };
             

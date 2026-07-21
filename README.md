@@ -5,3 +5,7 @@ Intended to use the lights of indicators to present lights to the user to indica
 - ESP32 Dev board
 - 2 X LM393 (pins tbc)
 - 1 X MAX7219
+
+## Arduino notes 
+- LOW == ON == 0
+- HIGH == OFF == 1

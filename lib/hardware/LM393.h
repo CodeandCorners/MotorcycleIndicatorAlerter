@@ -7,8 +7,7 @@ class LM393 {
         explicit LM393(uint8_t pin): pin(pin){};
 
         void connect();
-        //LOW == ON == 0
-        // HIGH == OFF == 1
+        
         LM393Enum reading();
     private:
         uint8_t pin;

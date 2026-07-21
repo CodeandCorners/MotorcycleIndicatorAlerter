@@ -36,7 +36,7 @@ LM393Enum LM393::reading() {
     return LM393Enum::ON_TOO_LONG;
   }
 
-  delay(20); // small pause to support processing
+
 }
 
 
