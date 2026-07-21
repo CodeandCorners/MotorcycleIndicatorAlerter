@@ -14,6 +14,18 @@ void MAX7219::setMaxbrightness() {
     mx.control(MD_MAX72XX::INTENSITY, intensitybrightest);
 }
 
-void MAX7219::setLeftImage(){};
-void MAX7219::setRightImage(){};
-void MAX7219::setBothImage(){};
+void MAX7219::setLeftImage(){
+    drawBitmap(LEFT_ARROW);
+};
+
+void MAX7219::setRightImage(){
+    drawBitmap(RIGHT_ARROW);
+};
+
+void MAX7219::setOnTooLong(){
+    drawBitmap(X_BITMAP);
+};
+
+void MAX7219::setBothImage(){
+    drawBitmap(CENTER_FILLED);
+};
