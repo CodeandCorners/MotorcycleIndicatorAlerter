@@ -14,32 +14,21 @@ void LightAndImageOrchestrator::run() {
 }
 
 void LightAndImageOrchestrator::notProvenMoving(DirectionEnum direction){
-const unsigned long BLINK_INTERVAL_MS = 100;
-    bool togglePhase = (millis() / BLINK_INTERVAL_MS) % 2 == 0;
 
     switch (direction) {
         case DirectionEnum::LEFT_ON:
+        case DirectionEnum::LEFT_ON_TOO_LONG:
             max7219.setLeftImage();
             break;
 
-        case DirectionEnum::LEFT_ON_TOO_LONG:
-            if (togglePhase) {
-                max7219.setLeftImage();
-            } else {
-                max7219.setOnTooLong();
-            }
-            break;
 
+            break;
         case DirectionEnum::RIGHT_ON:
             max7219.setRightImage();
             break;
 
         case DirectionEnum::RIGHT_ON_TOO_LONG:
-            if (togglePhase) {
-                max7219.setRightImage();
-            } else {
-                max7219.setOnTooLong();
-            }
+           max7219.setRightImage();
             break;
 
         case DirectionEnum::BOTH_ON:
