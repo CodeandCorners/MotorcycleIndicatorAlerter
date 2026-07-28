@@ -16,18 +16,17 @@ HardwareSerial gpsSerial(2);
 TinyGPSPlus gps;
 NEOM8N neo8(gpsSerial, gps);
 SpeedService speedService(neo8);
-
 MAX7219 max7219;
-
 LightDirectionService lds(lm393Left, lm393Right);
 LightAndImageOrchestrator laio(lds, max7219, speedService);
+
 const long GPSPingDelay = 1000;
 uint64_t lastGPSCheck = 0;
 
 uint64_t ensureGPS(uint64_t lastCheck) {
  uint64_t now = millis();
  if(now - lastCheck >= GPSPingDelay) {
-  Serial.println("//Ping");
+  Serial.println("Ensure GPS Ping");
    neo8.ping();
   return now;
  } else {

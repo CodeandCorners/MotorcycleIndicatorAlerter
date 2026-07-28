@@ -1,13 +1,17 @@
 #include "SpeedService.h"
+
 void SpeedService::determineSpeed(){
     float currentSpeed = neo.getCurrentspeedInKMh();
     Serial.print("SpeedService current speed ");
+    Serial.print(currentSpeed);
     Serial.println(" KMH");
 
     unsigned long currentMillis = millis();
+    // funky stablising magic
     bool isAcceleratingOrCruising = (currentSpeed >= lastSpeed - 0.8f);
     
-    if (currentSpeed > 10.0f && isAcceleratingOrCruising) {
+
+    if (currentSpeed > thresholdForMovementKMH && isAcceleratingOrCruising) {
         if (speedStartTime == 0) {
             speedStartTime = currentMillis; 
         }

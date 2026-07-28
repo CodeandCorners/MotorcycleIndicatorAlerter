@@ -17,11 +17,11 @@ void LightAndImageOrchestrator::notProvenMoving(DirectionEnum direction){
 
     switch (direction) {
         case DirectionEnum::LEFT_ON:
+        case DirectionEnum::LEFT_ON_TOO_LONG:
             max7219.setLeftImage();
             break;
 
-        case DirectionEnum::LEFT_ON_TOO_LONG:
-              max7219.setLeftImage();
+
             break;
         case DirectionEnum::RIGHT_ON:
             max7219.setRightImage();
