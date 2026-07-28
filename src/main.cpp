@@ -27,6 +27,7 @@ uint64_t lastGPSCheck = 0;
 uint64_t ensureGPS(uint64_t lastCheck) {
  uint64_t now = millis();
  if(now - lastCheck >= GPSPingDelay) {
+  Serial.println("//Ping");
    neo8.ping();
   return now;
  } else {
@@ -41,14 +42,15 @@ void setup() {
   lm393Left.connect();
   lm393Right.connect();
   neo8.connect();
-  delay(1000);
+  delay(5000);
 }
 
 void loop() {
   lastGPSCheck = ensureGPS(lastGPSCheck);
-  speedService.determineSpeed();
+  neo8.encode();
   if(neo8.getStillConnected()) {
-  laio.run(); 
+    speedService.determineSpeed();
+    laio.run(); 
   } else {
     Serial.println("GPS Not connected, no orchestrator run");
   }

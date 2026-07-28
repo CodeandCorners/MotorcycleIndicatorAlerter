@@ -15,8 +15,8 @@ Intended to use the lights of indicators to present lights to the user to indica
 |                       | DIN        | GPIO 27   |
 |                       | CLK        | GPIO 25   |
 |                       | CS         | GPIO 26   |
-| **NEO8MN**            | TX         | GPIO 16   |
-|                       | RX         | GPIO 17   |
+| **NEO8MN**            | TX         |GPIO 17/TX2   |
+|                       | RX         |GPIO 16/RX2   |
 |                       | VCC        | VIN (5V)  |
 |                       | GND        | GND       |
 
