@@ -6,7 +6,6 @@
 class LightDirectionService {
     public:
         explicit LightDirectionService(LM393& lm393Left, LM393& lm393Right): lm393Left(lm393Left), lm393Right(lm393Right){}; 
-
         DirectionEnum calculateDirection();
         
     private:
