@@ -2,7 +2,6 @@
 #include "../models/DirectionEnum.h"
 #include "../models/SpeedEnum.h"
 
-
 void LightAndImageOrchestrator::run() {
     DirectionEnum direction = lds.calculateDirection();
     SpeedEnum speed = ss.getSpeed();
@@ -20,22 +19,14 @@ void LightAndImageOrchestrator::notProvenMoving(DirectionEnum direction){
         case DirectionEnum::LEFT_ON_TOO_LONG:
             max7219.setLeftImage();
             break;
-
-
-            break;
         case DirectionEnum::RIGHT_ON:
+        case DirectionEnum::RIGHT_ON_TOO_LONG:
             max7219.setRightImage();
             break;
-
-        case DirectionEnum::RIGHT_ON_TOO_LONG:
-           max7219.setRightImage();
-            break;
-
         case DirectionEnum::BOTH_ON:
         case DirectionEnum::BOTH_ON_TOO_LONG:
             max7219.setBothImage();
             break;
-
         default:
             max7219.turnOffAll();
             break;
