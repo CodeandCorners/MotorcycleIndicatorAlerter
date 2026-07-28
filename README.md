@@ -1,6 +1,8 @@
 # Motorcycle Indicator Alerter
 Intended to use the lights of indicators to present lights to the user to indicate indicator status/indicators remaining on.
 
+Setup for ESP32 Dev boardl
+
 ## Hardware
 | Component             | Module Pin | ESP32 Pin |
 | --------------------- | ---------- | --------- |
@@ -15,8 +17,8 @@ Intended to use the lights of indicators to present lights to the user to indica
 |                       | DIN        | GPIO 27   |
 |                       | CLK        | GPIO 25   |
 |                       | CS         | GPIO 26   |
-| **NEO8MN**            | TX         |GPIO 17/TX2   |
-|                       | RX         |GPIO 16/RX2   |
+| **NEO8MN**            | TX         | GPIO RX2   |
+|                       | RX         | GPIO TX2   |
 |                       | VCC        | VIN (5V)  |
 |                       | GND        | GND       |
 
