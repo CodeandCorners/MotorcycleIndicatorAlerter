@@ -29,3 +29,7 @@ void MAX7219::setOnTooLong(){
 void MAX7219::setBothImage(){
     drawBitmap(CENTER_FILLED);
 };
+
+void MAX7219::setQuestionMark(){
+    drawBitmap(QUESTION_MARK);
+};

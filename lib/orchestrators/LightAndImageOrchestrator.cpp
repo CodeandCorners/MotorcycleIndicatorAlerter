@@ -2,6 +2,19 @@
 #include "../models/DirectionEnum.h"
 #include "../models/SpeedEnum.h"
 
+
+void LightAndImageOrchestrator::reconnecting() {
+    const unsigned long BLINK_INTERVAL_MS = 100;
+    bool togglePhase = (millis() / BLINK_INTERVAL_MS) % 2 == 0;
+
+    if(togglePhase) {
+        max7219.setQuestionMark();
+    } else {
+        max7219.turnOffAll();
+    }
+
+
+}
 void LightAndImageOrchestrator::run() {
     DirectionEnum direction = lds.calculateDirection();
     SpeedEnum speed = ss.getSpeed();

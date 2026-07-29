@@ -51,6 +51,7 @@ void loop() {
     speedService.determineSpeed();
     laio.run(); 
   } else {
+    laio.reconnecting();
     Serial.println("GPS Not connected, no orchestrator run");
   }
 }
