@@ -13,7 +13,6 @@ void LightAndImageOrchestrator::reconnecting() {
         max7219.turnOffAll();
     }
 
-
 }
 void LightAndImageOrchestrator::run() {
     DirectionEnum direction = lds.calculateDirection();

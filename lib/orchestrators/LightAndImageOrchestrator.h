@@ -10,6 +10,7 @@ class LightAndImageOrchestrator {
     public:
         explicit LightAndImageOrchestrator(LightDirectionService& lds, MAX7219& max7219, SpeedService& ss): lds(lds), max7219(max7219), ss(ss){};
         void run();
+        void reconnecting();
     private:
         void notProvenMoving(DirectionEnum direction);
         void movingEvident(DirectionEnum direction);
