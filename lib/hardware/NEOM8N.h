@@ -7,6 +7,7 @@ class NEOM8N {
         void connect();
         void encode();
         bool ping();
+        bool isValid();
         bool getStillConnected(){return stillConnected;}
         float getCurrentspeedInKMh();
 

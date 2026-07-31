@@ -13,28 +13,31 @@ class MAX7219 {
         void setRightImage();
         void setOnTooLong();
         void setBothImage();
+        void setQuestionMark();
 
     private:
-    const byte LEFT_ARROW[8] = {
-        B00011000,
-        B00001100,
-        B11111110,
-        B11111111,
-        B11111110,
-        B00001100,
-        B00011000,
-        B00000000
-    };
-    const byte RIGHT_ARROW[8] = {
-        B00011000,
-        B00110000,
-        B01111111,
-        B11111111,
-        B01111111,
-        B00110000,
-        B00011000,
-        B00000000
-    };
+    // pointed down for fitment
+ const byte LEFT_ARROW[8] = {
+    B00000000,
+    B00011000,
+    B00001100,
+    B11111110,
+    B11111111,
+    B11111110,
+    B00001100,
+    B00011000
+};
+// pointed up for fitment
+  const byte RIGHT_ARROW[8] = {
+    B00011000,
+    B00110000,
+    B01111111,
+    B11111111,
+    B01111111,
+    B00110000,
+    B00011000,
+    B00000000
+};
 
     const byte X_BITMAP[8] = {
         B10000001,
@@ -56,6 +59,17 @@ class MAX7219 {
         B01111110,
         B00000000
     };
+// sideways for fitment
+   const byte QUESTION_MARK[8] = {
+    B00000000,
+    B00000000,
+    B00000000,
+    B11110000,
+    B00001000,
+    B00001100,
+    B01000010,
+    B00111100
+};
 
     void drawBitmap(const byte bitmap[8])
 {

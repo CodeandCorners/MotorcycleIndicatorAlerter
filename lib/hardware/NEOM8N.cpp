@@ -25,6 +25,10 @@ if (gps.charsProcessed() < 10) {
         Serial.println("Fix Error: Waiting for satellite lock...");
         stillConnected = false;
         return false;
+    } else if (!gps.speed.isValid()) {
+        Serial.println("SPEED ERROR, GPS Speed invalid");
+        stillConnected = false;
+        return false;
     } else if(gps.location.age() > 2000) {
         Serial.println("Data Error: GPS signal lost or frozen!");
         stillConnected = false;
