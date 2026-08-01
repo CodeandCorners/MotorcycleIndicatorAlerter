@@ -16,28 +16,26 @@ class MAX7219 {
         void setQuestionMark();
 
     private:
-    // pointed down for fitment
- const byte LEFT_ARROW[8] = {
-    B00000000,
-    B00011000,
-    B00001100,
-    B11111110,
-    B11111111,
-    B11111110,
-    B00001100,
-    B00011000
-};
-// pointed up for fitment
-  const byte RIGHT_ARROW[8] = {
-    B00011000,
-    B00110000,
-    B01111111,
-    B11111111,
-    B01111111,
-    B00110000,
-    B00011000,
-    B00000000
-};
+const byte LEFT_ARROW[8] = {
+        B00011000,
+        B00001100,
+        B11111110,
+        B11111111,
+        B11111110,
+        B00001100,
+        B00011000,
+        B00000000
+    };
+    const byte RIGHT_ARROW[8] = {
+        B00011000,
+        B00110000,
+        B01111111,
+        B11111111,
+        B01111111,
+        B00110000,
+        B00011000,
+        B00000000
+    };
 
     const byte X_BITMAP[8] = {
         B10000001,
