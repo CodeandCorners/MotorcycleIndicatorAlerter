@@ -12,8 +12,8 @@ while (gpsSerial.available() > 0) {
   }
 }
 
-float NEOM8N::getCurrentspeedInKMh(){
-    return gps.speed.kmph();
+float NEOM8N::getCurrentspeedInMPH(){
+    return gps.speed.mph();
 };
 
 bool NEOM8N::ping() {
