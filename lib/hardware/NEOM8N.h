@@ -9,7 +9,7 @@ class NEOM8N {
         bool ping();
         bool isValid();
         bool getStillConnected(){return stillConnected;}
-        float getCurrentspeedInKMh();
+        float getCurrentspeedInMPH();
 
     private:
         HardwareSerial& gpsSerial;

@@ -2,15 +2,15 @@
 
 void SpeedService::determineSpeed()
 {
-    float currentSpeed = neo.getCurrentspeedInKMh();
+    float currentSpeed = neo.getCurrentspeedInMPH();
 
     Serial.print("SpeedService current speed ");
     Serial.print(currentSpeed);
-    Serial.println(" KMH");
+    Serial.println(" MPH");
 
     unsigned long currentMillis = millis();
 
-    if (currentSpeed > thresholdForMovementKMH)
+    if (currentSpeed > thresholdForMovementMPH)
     {
         if (speedStartTime == 0)
         {

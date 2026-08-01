@@ -10,7 +10,7 @@ class SpeedService {
         SpeedEnum getSpeed() { return speedEnum;};
     private:
         NEOM8N& neo;
-        const float thresholdForMovementKMH = 15.0f;
+        const float thresholdForMovementMPH = 8.0f;
         const long thresholdAmountOfTimeMovementMs = 15000;
         unsigned long speedStartTime = 0;
         SpeedEnum speedEnum = SpeedEnum::UNCONFIRMED;
